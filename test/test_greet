@@ -1,0 +1,6 @@
+from lib.greet import greet.py
+
+
+def test_greet():
+    
+    assert greet("jim") == 'Hello jim!'

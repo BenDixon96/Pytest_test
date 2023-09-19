@@ -1,0 +1,6 @@
+from lib.add_five import add_five
+
+def test_add_five_returns_eight_for_three():
+    result = add_five(3)
+    assert result == 8
+    assert add_five(7) == 12
