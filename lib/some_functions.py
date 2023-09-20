@@ -26,7 +26,7 @@ def encode(text, key):
     ciphertext_chars = []
     for i in text:
         ciphered_char = chr(65 + cipher.index(i))
-       
+
         ciphertext_chars.append(ciphered_char)
 
     return "".join(ciphertext_chars)
@@ -77,13 +77,13 @@ class DiaryEntry:
         # Returns:
         #   A formatted diary entry, for example:
         #   "My Title: These are the contents"
-        pass
+        
 
     def count_words(self):
         return len(self.contents.split())
         # Returns:
         #   int: the number of words in the diary entry
-        pass
+    
 
     def reading_time(self, wpm):
         return self.count_words() / wpm
@@ -93,7 +93,7 @@ class DiaryEntry:
         # Returns:
         #   int: an estimate of the reading time in minutes for the contents at
         #        the given wpm.
-        pass
+        
 
     def reading_chunk(self, wpm, minutes):
         count = wpm * minutes + self.bookmark
@@ -140,4 +140,45 @@ class GrammarStats:
         # Returns:
         #   int: the percentage of texts checked so far that passed the check
         #        defined in the `check` method. The number 55 represents 55%.
-          
+
+
+    # File: lib/factorial.py
+
+def factorial(n):
+    product = 1
+    while n > 0:
+        n -= 1
+        product *= n
+    return product
+
+print(factorial(5))
+# Expected: 120 (the result of: 5 * 4 * 3 * 2 * 1)
+# Actual: 24      
+
+# File: lib/vowel_remover.py
+
+class VowelRemover:
+    def __init__(self, text):
+        self.text = text
+        self.vowels = "aioueAIOUE"
+        
+
+    def remove_vowels(self):
+        res = ''
+        for i in self.text:
+            if i not in self.vowels:
+                res += i
+
+        return res        
+
+
+       
+                
+            
+         
+
+# File: tests/test_vowel_remover.py
+
+
+# File: lib/diary.py
+
